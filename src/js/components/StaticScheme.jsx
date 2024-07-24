@@ -21,7 +21,6 @@ const Scheme = ({ activeElement = null }) => {
     useEffect(() => {
         const loadFloor = async () => {
             const floors = await loadFloors(activeElement.key_liter_id, activeElement.floor);
-            console.log('lol', activeElement.key_liter_id, activeElement.floor)
             setFloors(floors);
         };
 

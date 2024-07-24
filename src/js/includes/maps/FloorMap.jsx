@@ -32,7 +32,6 @@ const FloorMap = ({ floors = [], controls = false, buildingId = null, selectedRo
                 try {
                     if (selectedRoomData.complex !== 0) {
                         const response = await axios.get(`/api/premises/complex/${selectedRoomData.complex}`);
-                        console.log('hui', response.data)
                         setRooms(response.data);
                         setComplexIds(response.data.map(item => item.code))
                     } else {
